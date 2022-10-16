@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier Prime', sans-serif;
+}
+
+body {
+  background: #d8d9cf;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.calculator {
+  background-color: rgba(17, 25, 40, 0.23);
+  border-radius: 15px;
+  width: 450px;
+}
+
+.calculator-display {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 2px solid #ededed;
+  height: auto;
+}
+
+h2 {
+  margin: 0;
+  padding: 15px;
+  font-size: 35px;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 15px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 25px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #ededed;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline:none;
+}
+
+.operator {
+  background: #9ed2c6;
+  color: #fff;
+}
+
+.clear {
+  background: #e26868;
+  color: #fff;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: #54bab9;
+}
+
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 90%;
+  }
+}
