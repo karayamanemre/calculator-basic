@@ -22,7 +22,6 @@ body {
   color: #000;
   background: linear-gradient(145deg, #acbfc1, #7e8b8d);
   border-radius: 12px;
-
   box-shadow: rgba(0, 0, 0, 0.4) 2px 4px 40px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -101,6 +100,23 @@ button:focus {
 
 @media screen and (max-width: 600px) {
   .calculator {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .equal-sign {
+    height: 225px;
   }
 }
